@@ -1,0 +1,31 @@
+Apr  1 00:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
+Apr  1 06:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
+Apr  1 09:29:00 prod-bastion sshd[1001]: Accepted publickey for alice from 10.20.30.40 port 51234 ssh2
+Apr  1 12:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
+Apr  1 17:29:00 prod-bastion sshd[1001]: Disconnected from alice 10.20.30.40 port 51234
+Apr  1 18:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
+Apr  2 00:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
+Apr  2 06:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
+Apr  2 09:22:00 prod-bastion sshd[1001]: Accepted publickey for alice from 10.20.30.40 port 51234 ssh2
+Apr  2 12:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
+Apr  2 17:22:00 prod-bastion sshd[1001]: Disconnected from alice 10.20.30.40 port 51234
+Apr  2 18:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
+Apr  3 14:22:05 prod-bastion sshd[3003]: Accepted password for alice from 198.51.100.42 port 54321 ssh2
+Apr  3 14:24:05 prod-bastion useradd[4004]: new user: name=ghostuser, UID=1337, GID=1337, home=/home/ghostuser, shell=/bin/bash
+Apr  3 14:27:05 prod-bastion sudo: alice : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/bin/bash
+Apr  4 09:15:00 prod-bastion sshd[1001]: Accepted publickey for alice from 10.20.30.40 port 51235 ssh2
+Apr  6 02:00:10 prod-bastion sshd[5005]: Failed password for bob from 192.0.2.77 port 55000 ssh2
+Apr  6 02:03:10 prod-bastion sshd[5005]: Failed password for bob from 192.0.2.77 port 55000 ssh2
+Apr  6 02:06:10 prod-bastion sshd[5005]: Failed password for bob from 192.0.2.77 port 55000 ssh2
+Apr  6 02:09:10 prod-bastion sshd[5005]: Failed password for bob from 192.0.2.77 port 55000 ssh2
+Apr  6 02:12:10 prod-bastion sshd[5005]: Failed password for bob from 192.0.2.77 port 55000 ssh2
+Apr  6 02:15:10 prod-bastion sshd[5005]: Failed password for bob from 192.0.2.77 port 55000 ssh2
+Apr  6 02:18:10 prod-bastion sshd[5005]: Failed password for bob from 192.0.2.77 port 55000 ssh2
+Apr  6 02:21:10 prod-bastion sshd[5005]: Failed password for bob from 192.0.2.77 port 55000 ssh2
+Apr  6 02:25:44 prod-bastion sshd[5005]: Accepted password for bob from 192.0.2.77 port 55000 ssh2
+Mar 31 00:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
+Mar 31 06:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
+Mar 31 09:15:00 prod-bastion sshd[1001]: Accepted publickey for alice from 10.20.30.40 port 51234 ssh2
+Mar 31 12:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
+Mar 31 17:15:00 prod-bastion sshd[1001]: Disconnected from alice 10.20.30.40 port 51234
+Mar 31 18:03:00 prod-bastion sshd[2002]: Failed password for alice from 198.51.100.42 port 54321 ssh2
