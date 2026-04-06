@@ -1,0 +1,382 @@
+{
+  "_comment": "Synthetic CloudTrail log set demonstrating a multi-day Low-and-Slow reconnaissance attack. An adversary (198.51.100.42) probes AWS resources every 6 hours for 3 days, then pivots to IAM changes and S3 exfiltration on Day 4.",
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-03-30T00:00:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "GetUser",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": { "userName": "analyst-readonly" },
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-03-30T06:00:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-03-30T12:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListBuckets",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-03-30T18:00:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-03-31T00:00:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListPolicies",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-03-31T06:00:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListRoles",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-03-31T12:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetBucketPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": { "bucketName": "prod-data" },
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-03-31T18:00:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "GetAccountAuthorizationDetails",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-04-01T00:00:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListAttachedUserPolicies",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": { "userName": "analyst-readonly" },
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-04-01T06:00:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeSecurityGroups",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-04-01T12:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListObjects",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": { "bucketName": "prod-data" },
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-04-01T18:00:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "SimulatePrincipalPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": {
+        "policySourceArn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "actionNames": ["iam:CreateUser", "iam:AttachUserPolicy", "s3:PutBucketPolicy"]
+      },
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-04-02T04:15:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateUser",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": { "userName": "svc-backup-agent" },
+      "responseElements": {
+        "user": {
+          "userName": "svc-backup-agent",
+          "arn": "arn:aws:iam::999888777666:user/svc-backup-agent"
+        }
+      },
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-04-02T04:16:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": {
+        "userName": "svc-backup-agent",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-04-02T04:18:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": { "userName": "svc-backup-agent" },
+      "responseElements": {
+        "accessKey": { "accessKeyId": "AKIAIOSFODNN7EXAMPLE", "status": "Active" }
+      },
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-04-02T06:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "PutBucketPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": {
+        "bucketName": "prod-data",
+        "policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::prod-data/*\"}]}"
+      },
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-04-02T06:30:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": { "bucketName": "prod-data", "key": "customers/all.csv" },
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-04-02T06:31:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": { "bucketName": "prod-data", "key": "finance/q1-2026.csv" },
+      "responseElements": {},
+      "errorCode": ""
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAATTACKEREXAMPLE01",
+        "arn": "arn:aws:iam::999888777666:user/analyst-readonly",
+        "accountId": "999888777666",
+        "userName": "analyst-readonly"
+      },
+      "eventTime": "2026-04-02T06:32:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.42",
+      "userAgent": "python-requests/2.31.0",
+      "requestParameters": { "bucketName": "audit-logs", "key": "cloudtrail/2026-03.log.gz" },
+      "responseElements": {},
+      "errorCode": ""
+    }
+  ]
+}
