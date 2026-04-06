@@ -13,10 +13,7 @@
 
 import { parseCloudTrail, LogEvent } from "./parsers/cloudtrail";
 
-// ---------------------------------------------------------------------------
-// Re-export the parser so callers only need to import from engine.ts
-// ---------------------------------------------------------------------------
-export { parseCloudTrail, LogEvent };
+export type { LogEvent };
 
 // ---------------------------------------------------------------------------
 // Types
