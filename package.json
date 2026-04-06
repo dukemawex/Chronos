@@ -1,0 +1,48 @@
+{
+  "name": "chronos",
+  "version": "1.0.0",
+  "description": "Autonomous Threat Hunting & Incident Response Engine — parses AWS CloudTrail logs, detects APT patterns, and emits security reports.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dukemawex/Chronos.git"
+  },
+  "keywords": [
+    "security",
+    "threat-hunting",
+    "incident-response",
+    "cloudtrail",
+    "aws",
+    "siem",
+    "apt"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dukemawex/Chronos/issues"
+  },
+  "homepage": "https://github.com/dukemawex/Chronos#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.19.39",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.9",
+    "typescript": "^5.9.3"
+  }
+}
