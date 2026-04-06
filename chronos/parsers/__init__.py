@@ -45,7 +45,7 @@ def _utc(dt: datetime) -> datetime:
 _SYSLOG_TS_PATTERN = re.compile(
     r"^(?P<month>[A-Za-z]{3})\s+(?P<day>\d{1,2})\s+(?P<time>\d{2}:\d{2}:\d{2})"
 )
-_SYSLOG_TS_YEAR = datetime.utcnow().year  # assume current year
+_SYSLOG_TS_YEAR = datetime.now(timezone.utc).year  # assume current year
 
 _SSH_FAILED = re.compile(
     r"Failed (?:password|publickey) for (?:invalid user )?(?P<user>\S+) from (?P<src_ip>[\d.a-fA-F:]+) port (?P<port>\d+)"

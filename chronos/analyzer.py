@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import os
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, List, Optional
 
 from chronos.parsers import (
@@ -19,6 +19,7 @@ from chronos.parsers import (
     parse_ssh_auth,
 )
 from chronos.hunters import ALL_HUNTERS, Finding
+from chronos.hunters.apt import APT_HUNTERS
 
 # Severity ordering for sorting
 _SEVERITY_ORDER = {"CRITICAL": 0, "HIGH": 1, "MEDIUM": 2, "LOW": 3, "INFO": 4}
@@ -144,14 +145,14 @@ def analyse(
     # Sort all events chronologically
     all_events.sort(key=lambda e: e["timestamp"])
 
-    # Run every registered hunter
+    # Run every registered hunter (base + APT)
     findings: List[Finding] = []
-    for hunter in ALL_HUNTERS:
+    for hunter in ALL_HUNTERS + APT_HUNTERS:
         findings.extend(hunter(all_events))
 
     return AnalysisResult(
         events=all_events,
         findings=findings,
         log_sources=sources,
-        analysis_time=datetime.utcnow(),
+        analysis_time=datetime.now(timezone.utc),
     )
